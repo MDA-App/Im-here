@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he" dir="rtl" translate="no">
+        
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -860,7 +861,24 @@
             margin-right: 5px;
             vertical-align: middle;
         }
-    </style>
+
+        /* חסימת סימון טקסט */
+    * {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    /* שחרור חסימה רק לשדות כתיבה */
+    input, textarea {
+        -webkit-user-select: text;
+        user-select: text;
+    }
+        </style>
+
+        <meta name="google" content="notranslate">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        
 </head>
 <body>
 
@@ -3613,6 +3631,13 @@
                 if (isIOS) document.getElementById('ios-install-modal').classList.remove('hidden');
             }
         });
+        
+            document.addEventListener('contextmenu', event => {
+            if (event.target.tagName !== 'INPUT' && event.target.tagName !== 'TEXTAREA') {
+                event.preventDefault();
+            }
+        }, false);
+
 
     </script>
 </body>
