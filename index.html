@@ -1110,7 +1110,7 @@
             <input type="time" id="ns-start">
             <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">שעת סיום (אופציונלי):</label>
             <input type="time" id="ns-end">
-            <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">רדיוס נוכחות:</label>
+            <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">רדיוס נוכחות במטרים:</label>
             <div style="position:relative;">
                 <input type="number" id="ns-radius" min="10" max="2000" value="50" step="5">
                 <span style="position:absolute;left:14px;top:50%;transform:translateY(-60%);font-size:0.82rem;color:var(--muted-gray);font-weight:600;pointer-events:none;">מ׳</span>
@@ -1323,19 +1323,19 @@
             <input type="time" id="es-session-start">
             <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">שעת סיום (אופציונלי):</label>
             <input type="time" id="es-session-end">
-            <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">רדיוס נוכחות (מטרים):</label>
+            <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">רדיוס נוכחות במטרים:</label>
             <div style="position:relative;">
                 <input type="number" id="es-session-radius" min="10" max="2000" step="5">
                 <span style="position:absolute;left:14px;top:50%;transform:translateY(-60%);font-size:0.82rem;color:var(--muted-gray);font-weight:600;pointer-events:none;">מ׳</span>
             </div>
-            <div style="display:flex;gap:8px;margin-bottom:14px;">
-                <button type="button" class="es-radius-preset outline action-btn-small" data-val="25">25מ׳</button>
-                <button type="button" class="es-radius-preset outline action-btn-small" data-val="50">50מ׳</button>
-                <button type="button" class="es-radius-preset outline action-btn-small" data-val="150">150מ׳</button>
-                <button type="button" class="es-radius-preset outline action-btn-small" data-val="300">300מ׳</button>
-                <button id="btn-bypass-gps" class="action-btn-small bg-purple">🚀 שחרר</button>
-          
-            </div>
+            <div style="display: flex; gap: 8px; margin-bottom: 14px; width: 100%; flex-wrap: nowrap;">
+    <button type="button" class="es-radius-preset outline action-btn-small" data-val="25" style="flex: 1 1 auto; white-space: nowrap;">25 מ</button>
+    <button type="button" class="es-radius-preset outline action-btn-small" data-val="50" style="flex: 1 1 auto; white-space: nowrap;">50 מ</button>
+    <button type="button" class="es-radius-preset outline action-btn-small" data-val="150" style="flex: 1 1 auto; white-space: nowrap;">150 מ</button>
+    <button type="button" class="es-radius-preset outline action-btn-small" data-val="300" style="flex: 1 1 auto; white-space: nowrap;">300 מ</button>
+    <button id="btn-bypass-gps" class="action-btn-small bg-purple" style="flex: 2 1 auto; white-space: nowrap;">🚀 שחרר ל-5 דק'</button>
+</div>
+
             <button id="btn-resample-location" class="secondary" style="margin-bottom:10px;">📍 דגום מיקום מחדש</button>
             <p id="es-location-status" style="font-size:0.82rem;color:var(--muted-gray);margin-bottom:14px;text-align:center;"></p>
             <button id="btn-save-session-edit">שמור שינויים</button>
