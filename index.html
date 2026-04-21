@@ -940,7 +940,7 @@
                 <button type="button" class="radius-preset outline action-btn-small" data-val="150">150 מ׳</button>
                 <button type="button" class="radius-preset outline action-btn-small" data-val="300">300 מ׳</button>
             </div>
-            <button id="btn-create-session">הפעל ודגום מיקום 📍</button>
+            <button id="btn-create-session">פתח ודגום מיקום 📍</button>
             <button id="btn-create-session-no-gps" class="outline" style="margin-top:10px;border-color:var(--warning-orange);color:var(--warning-orange);">⚠️ פתח ללא GPS (תלמידים לא יאומתו)</button>
             <button class="outline" style="margin-top:10px;" id="btn-cancel-session-modal">ביטול</button>
         </div>
@@ -1971,14 +1971,14 @@
                         attendanceRadius: radiusVal
                     });
                     btn.disabled = false;
-                    btn.textContent = "הפעל ודגום מיקום 📍";
+                    btn.textContent = "פתח ודגום מיקום 📍";
                     closeModals();
                     showToast('מפגש נפתח בהצלחה! המיקום נדגם ✅', 'success');
                     loadSessions();
                 },
                 async (geoError) => {
                     btn.disabled = false;
-                    btn.textContent = "הפעל ודגום מיקום 📍";
+                    btn.textContent = "פתח ודגום מיקום 📍";
                     if (geoError && geoError.code === 1) {
                         // PERMISSION_DENIED — browser already blocked location, will not re-prompt.
                         // Give the user clear reset instructions AND the option to open without GPS.
