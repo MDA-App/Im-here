@@ -995,76 +995,76 @@
         </section>
 
         <!-- INSTRUCTOR -->
-        <section id="view-instructor" class="hidden">
-            <div id="instructor-main">
-                <div class="card">
-                    <h2>הקבוצות שלי</h2>
-                    <button class="secondary" id="btn-instructor-create-group" style="margin-bottom:20px;">➕ יצירת קבוצה חדשה</button>
-                    <div id="instructor-groups-container"></div>
+<section id="view-instructor" class="hidden">
+    <div id="instructor-main">
+        <div class="card">
+            <h2>הקבוצות שלי</h2>
+            <button class="secondary" id="btn-instructor-create-group" style="margin-bottom:20px;">➕ יצירת קבוצה חדשה</button>
+            <div id="instructor-groups-container"></div>
+        </div>
+    </div>
+
+    <div id="instructor-group-details" class="hidden">
+        <div class="card">
+            <div class="action-row" style="justify-content:space-between;align-items:center;">
+                <div style="display:flex;gap:8px;">
+                    <button class="outline action-btn-small" id="btn-back-from-group">🔙 חזור</button>
+                    <button class="outline action-btn-small" id="btn-home-from-group">🏠 ראשי</button>
                 </div>
+                <button id="btn-open-inbox" class="outline action-btn-small" style="padding:8px 12px;font-size:1rem;border-color:var(--info-blue);color:var(--info-blue);" title="הודעות נכנסות">📬<span id="inbox-badge" class="hidden" style="background:var(--primary-red);color:white;border-radius:99px;font-size:0.65rem;font-weight:800;padding:1px 5px;margin-right:3px;vertical-align:top;"></span></button>
             </div>
-            <div id="instructor-group-details" class="hidden">
-                <div class="card">
-                    <div class="action-row" style="justify-content:space-between;align-items:center;">
-                        <div style="display:flex;gap:8px;">
-                            <button class="outline action-btn-small" id="btn-back-from-group">🔙 חזור</button>
-                            <button class="outline action-btn-small" id="btn-home-from-group">🏠 ראשי</button>
-                        </div>
-                        <button id="btn-open-inbox" class="outline action-btn-small" style="padding:8px 12px;font-size:1rem;border-color:var(--info-blue);color:var(--info-blue);" title="הודעות נכנסות">📬<span id="inbox-badge" class="hidden" style="background:var(--primary-red);color:white;border-radius:99px;font-size:0.65rem;font-weight:800;padding:1px 5px;margin-right:3px;vertical-align:top;"></span></button>
-                    </div>
-                    <h2 id="group-name-header">שם הקבוצה</h2>
-                    <div class="tab-container">
-                        <div class="tab active" data-group-tab="sessions">מפגשים</div>
-                        <div class="tab" data-group-tab="students">ניהול הקבוצה</div>
-                        <div class="tab" data-group-tab="notices">לוח מודעות</div>
-                    </div>
-                    <div id="tab-sessions">
-                        <div class="action-row">
-                            <button class="secondary action-btn-small" id="btn-new-session">➕ פתח מפגש</button>
-                            <button class="outline action-btn-small" style="width:50px;" id="btn-toggle-sort">🔃 שנה סדר</button>
-                        </div>
-                        <div id="instructor-sessions-list"></div>
-                    </div>
-                    <div id="tab-students" class="hidden">
-                        <div class="action-row">
-                            <button class="outline action-btn-small" id="btn-export-csv">📥 דוח נוכחות מלא (אקסל)</button>
-                            <button class="secondary action-btn-small" id="btn-add-student">👤 הוסף חניך (לפי ת.ז)</button>
-                            <button class="secondary action-btn-small" id="btn-add-instructor">👨‍🏫 הוסף מדריך לקורס</button>
-                        </div>
-                        <div id="instructor-students-list"></div>
-                    </div>
-                    <div id="tab-notices" class="hidden">
-                        <button class="secondary action-btn-small" style="margin-bottom:15px;" id="btn-add-notice">➕ פרסם הודעה חדשה לחניכים</button>
-                        <div id="instructor-notices-list"></div>
-                    </div>
+            <h2 id="group-name-header">שם הקבוצה</h2>
+            <div class="tab-container">
+                <div class="tab active" data-group-tab="sessions">מפגשים</div>
+                <div class="tab" data-group-tab="students">ניהול הקבוצה</div>
+                <div class="tab" data-group-tab="notices">לוח מודעות</div>
+            </div>
+            <div id="tab-sessions">
+                <div class="action-row">
+                    <button class="secondary action-btn-small" id="btn-new-session">➕ פתח מפגש</button>
+                    <button class="outline action-btn-small" style="width:50px;" id="btn-toggle-sort">🔃 שנה סדר</button>
                 </div>
+                <div id="instructor-sessions-list"></div>
             </div>
-            <div id="session-report-view" class="hidden">
-            <div id="session-report-view" class="hidden">
-    <div class="card">
-        <div style="display:flex;flex-direction:column;gap:12px;">
-            <div class="action-row" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
-                <button class="outline action-btn-small" id="btn-back-to-group">🔙 חזור</button>
-                <button class="outline action-btn-small" id="btn-home-from-session">🏠 ראשי</button>
-                <button id="btn-edit-session" class="outline action-btn-small" style="border-color:var(--info-blue);color:var(--info-blue);">✏️ ערוך מפגש</button>
-                <button id="btn-lock-session" class="action-btn-small" style="background:#b91c1c;width:auto;padding:9px 12px;font-size:0.85rem;">🔒 סגור</button>
+            <div id="tab-students" class="hidden">
+                <div class="action-row">
+                    <button class="outline action-btn-small" id="btn-export-csv">📥 דוח נוכחות מלא (אקסל)</button>
+                    <button class="secondary action-btn-small" id="btn-add-student">👤 הוסף חניך (לפי ת.ז)</button>
+                    <button class="secondary action-btn-small" id="btn-add-instructor">👨‍🏫 הוסף מדריך לקורס</button>
+                </div>
+                <div id="instructor-students-list"></div>
             </div>
-            <div class="action-row" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
-                <button id="btn-bypass-gps" class="action-btn-small bg-purple">🚀 שחרר מיקום ל-5 דק'</button>
+            <div id="tab-notices" class="hidden">
+                <button class="secondary action-btn-small" style="margin-bottom:15px;" id="btn-add-notice">➕ פרסם הודעה חדשה לחניכים</button>
+                <div id="instructor-notices-list"></div>
             </div>
         </div>
+    </div>
 
-                    <h2 id="report-title">נוכחות חיה</h2>
-                    <p id="bypass-status-text" class="text-orange hidden" style="margin-bottom:10px;font-weight:bold;"></p>
-                    <p id="session-radius-info" class="hidden" style="font-size:0.85rem;color:var(--muted-gray);margin-bottom:10px;"></p>
-                    <div class="action-row" style="margin-bottom:15px;">
-                        <button class="outline action-btn-small" id="btn-copy-session">📋 העתק דו"ח נוכחות מהיר</button>
-                        <button class="outline action-btn-small" id="btn-download-session-csv">📥 הורד דו"ח מפגש (אקסל) (CSV)</button>
-                    </div>
-                    <div id="report-container"></div>
+    <div id="session-report-view" class="hidden">
+        <div class="card">
+            <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;">
+                <div class="action-row" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+                    <button class="outline action-btn-small" id="btn-back-to-group">🔙 חזור</button>
+                    <button class="outline action-btn-small" id="btn-home-from-session">🏠 ראשי</button>
+                    <button id="btn-edit-session" class="outline action-btn-small" style="border-color:var(--info-blue);color:var(--info-blue);">✏️ ערוך מפגש</button>
+                    <button id="btn-lock-session" class="action-btn-small" style="background:#b91c1c;width:auto;padding:9px 12px;font-size:0.85rem;">🔒 סגור</button>
+                </div>
+                <div class="action-row" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+                    <button id="btn-bypass-gps" class="action-btn-small bg-purple">🚀 שחרר מיקום ל-5 דק'</button>
                 </div>
             </div>
-        </section>
+
+            <h2 id="report-title">נוכחות חיה</h2>
+            <p id="bypass-status-text" class="text-orange hidden" style="margin-bottom:10px;font-weight:bold;"></p>
+            <p id="session-radius-info" class="hidden" style="font-size:0.85rem;color:var(--muted-gray);margin-bottom:10px;"></p>
+            <div class="action-row" style="margin-bottom:15px;">
+                <button class="outline action-btn-small" id="btn-copy-session">📋 העתק דו"ח נוכחות מהיר</button>
+                <button class="outline action-btn-small" id="btn-download-session-csv">📥 הורד דו"ח מפגש (אקסל) (CSV)</button>
+            </div>
+            <div id="report-container"></div>
+        </div> </div> </section>
+
 
         <!-- STUDENT -->
         <section id="view-student" class="hidden">
