@@ -738,13 +738,13 @@
         <img id="splash-logo" src="M-icon.png" alt="I'm Here" style="width:160px;height:160px;object-fit:contain;mix-blend-mode:lighten;">
         <div id="splash-divider"></div>
         <h1 style="margin-bottom:4px;">I'm Here</h1>
-        <p>מערכת ניהול נוכחות</p>
+        <p>מערכת נוכחות חכמה</p>
     </div>
 
     <!-- FAB Install -->
     <button id="fab-install" class="hidden" style="position:fixed;bottom:20px;right:20px;z-index:10000;background:var(--primary-red);color:white;border:none;padding:12px 20px;border-radius:30px;box-shadow:0 4px 15px rgba(0,0,0,0.2);cursor:pointer;font-weight:bold;display:flex;align-items:center;gap:8px;">
         📱 שים לב! האפליקציה עדיין לא מותקנת אצלך במכשיר
-        התקנה מהירה בקליק ...
+        התקנה בקליק בלחיצה על הבאנר ...
     </button>
 
     <!-- Header -->
@@ -769,7 +769,7 @@
                     <input type="text" id="login-email" placeholder="תעודת זהות" required autocomplete="username">
                     <input type="password" id="login-pass" placeholder="סיסמה" required autocomplete="current-password">
                     <button type="submit" id="btn-login-submit">היכנס למערכת</button>
-                    <button type="button" class="outline" style="margin-top:15px;" id="btn-go-register">משתמש חדש? לחץ להרשמה (תלמיד)</button>
+                    <button type="button" class="outline" style="margin-top:15px;" id="btn-go-register">תלמיד חדש? לחץ להרשמה למערכת</button>
                 </form>
             </div>
             <div id="register-section" class="hidden">
@@ -779,7 +779,7 @@
                     <input type="text" id="reg-name" placeholder="שם מלא" required autocomplete="name">
                     <input type="password" id="reg-pass" placeholder="בחר סיסמה (לפחות 6 תווים)" required minlength="6" autocomplete="new-password">
                     <button type="submit" id="btn-reg-submit">צור משתמש</button>
-                    <button type="button" class="outline" style="margin-top:15px;" id="btn-go-login">חזור להתחברות</button>
+                    <button type="button" class="outline" style="margin-top:15px;" id="btn-go-login">חזור למסך ההתחברות</button>
                 </form>
             </div>
         </section>
@@ -793,11 +793,11 @@
             <div>
                 <label>שם מלא:</label>
                 <input type="text" id="prof-name" disabled>
-                <label>תעודת זהות (אימייל מערכת):</label>
+                <label>תעודת זהות (כולל מזהה מערכת):</label>
                 <input type="text" id="prof-email" disabled>
                 <h3 style="margin-top:20px;">החלפת סיסמה</h3>
                 <input type="password" id="prof-new-pass" placeholder="סיסמה חדשה (מינימום 6 תווים)" autocomplete="new-password">
-                <button id="btn-update-password">שינוי סיסמה</button>
+                <button id="btn-update-password">אשר סיסמה חדשה</button>
             </div>
         </section>
 
@@ -827,7 +827,7 @@
             <div id="instructor-main">
                 <div class="card">
                     <h2>הקבוצות שלי</h2>
-                    <button class="secondary" id="btn-instructor-create-group" style="margin-bottom:20px;">➕ פתח קבוצה חדשה</button>
+                    <button class="secondary" id="btn-instructor-create-group" style="margin-bottom:20px;">➕ יצירת קבוצה חדשה</button>
                     <div id="instructor-groups-container"></div>
                 </div>
             </div>
@@ -840,7 +840,7 @@
                     <h2 id="group-name-header">שם הקבוצה</h2>
                     <div class="tab-container">
                         <div class="tab active" data-group-tab="sessions">מפגשים</div>
-                        <div class="tab" data-group-tab="students">תלמידים (דוחות וניהול)</div>
+                        <div class="tab" data-group-tab="students">ניהול הקבוצה</div>
                         <div class="tab" data-group-tab="notices">לוח מודעות</div>
                     </div>
                     <div id="tab-sessions">
@@ -852,9 +852,9 @@
                     </div>
                     <div id="tab-students" class="hidden">
                         <div class="action-row">
-                            <button class="outline action-btn-small" id="btn-export-csv">📥 דוח נוכחות מלא (CSV)</button>
+                            <button class="outline action-btn-small" id="btn-export-csv">📥 דוח נוכחות מלא (אקסל)</button>
                             <button class="secondary action-btn-small" id="btn-add-student">👤 הוסף חניך (לפי ת.ז)</button>
-                            <button class="secondary action-btn-small" id="btn-add-instructor">👨‍🏫 הוסף מדריך נוסף</button>
+                            <button class="secondary action-btn-small" id="btn-add-instructor">👨‍🏫 הוסף מדריך לקורס</button>
                         </div>
                         <div id="instructor-students-list"></div>
                     </div>
@@ -879,7 +879,7 @@
                     <p id="session-radius-info" class="hidden" style="font-size:0.85rem;color:var(--muted-gray);margin-bottom:10px;"></p>
                     <div class="action-row" style="margin-bottom:15px;">
                         <button class="outline action-btn-small" id="btn-copy-session">📋 העתק דו"ח נוכחות מהיר</button>
-                        <button class="outline action-btn-small" id="btn-download-session-csv">📥 הורד דו"ח מפגש (CSV)</button>
+                        <button class="outline action-btn-small" id="btn-download-session-csv">📥 הורד דו"ח מפגש (אקסל) (CSV)</button>
                     </div>
                     <div id="report-container"></div>
                 </div>
@@ -925,20 +925,20 @@
             <h3>יצירת מפגש חדש</h3>
             <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">מספר מפגש:</label>
             <input type="number" id="ns-num">
-            <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">שעת התחלה חובה:</label>
+            <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">שעת התחלה (חובה):</label>
             <input type="time" id="ns-start">
-            <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">שעת סיום אופציונלית:</label>
+            <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">שעת סיום (אופציונלי):</label>
             <input type="time" id="ns-end">
-            <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">רדיוס נוכחות (מטרים):</label>
+            <label style="font-weight:500;font-size:0.9rem;margin-bottom:4px;display:block;">רדיוס נוכחות:</label>
             <div style="position:relative;">
                 <input type="number" id="ns-radius" min="10" max="2000" value="50" step="5">
                 <span style="position:absolute;left:14px;top:50%;transform:translateY(-60%);font-size:0.82rem;color:var(--muted-gray);font-weight:600;pointer-events:none;">מ׳</span>
             </div>
             <div style="display:flex;gap:8px;margin-bottom:14px;">
-                <button type="button" class="radius-preset outline action-btn-small" data-val="25">25מ׳</button>
-                <button type="button" class="radius-preset outline action-btn-small active-preset" data-val="50">50מ׳</button>
-                <button type="button" class="radius-preset outline action-btn-small" data-val="150">150מ׳</button>
-                <button type="button" class="radius-preset outline action-btn-small" data-val="300">300מ׳</button>
+                <button type="button" class="radius-preset outline action-btn-small" data-val="25">25 מ׳</button>
+                <button type="button" class="radius-preset outline action-btn-small active-preset" data-val="50">50 מ׳</button>
+                <button type="button" class="radius-preset outline action-btn-small" data-val="150">150 מ׳</button>
+                <button type="button" class="radius-preset outline action-btn-small" data-val="300">300 מ׳</button>
             </div>
             <button id="btn-create-session">הפעל ודגום מיקום 📍</button>
             <button id="btn-create-session-no-gps" class="outline" style="margin-top:10px;border-color:var(--warning-orange);color:var(--warning-orange);">⚠️ פתח ללא GPS (תלמידים לא יאומתו)</button>
@@ -965,7 +965,7 @@
 
     <div id="exception-alert-modal" class="modal-overlay hidden">
         <div class="card" style="width:100%;max-width:400px;margin:0;text-align:center;border-top:4px solid var(--danger-red);">
-            <h3 style="color:var(--danger-red);margin-bottom:10px;">🚨 בקשה חריגה 🚨</h3>
+            <h3 style="color:var(--danger-red);margin-bottom:10px;">🚨 התקבלה בקשה חריגה 🚨</h3>
             <p id="eam-text" style="font-size:1.1rem;margin-bottom:20px;"></p>
             <button class="outline" id="btn-close-exception-alert">הבנתי, עבור לטיפול</button>
         </div>
@@ -1023,13 +1023,13 @@
 
     <div id="ios-install-modal" class="modal-overlay hidden">
         <div class="card" style="width:100%;max-width:350px;text-align:center;margin:0;">
-            <h3>התקנת האפליקציה ב-iOS</h3>
+            <h3>התקנת האפליקציה במכשיר אייפון</h3>
             <p style="margin:15px 0;">כדי להתקין את המערכת על האייפון שלך:</p>
             <ol style="text-align:right;margin-bottom:20px;padding-right:20px;">
                 <li>לחץ על כפתור השיתוף (Share) בתחתית המסך.</li>
                 <li>גלול למטה ולחץ על <strong>"הוסף למסך הבית" (Add to Home Screen)</strong>.</li>
             </ol>
-            <button id="btn-close-ios-modal">הבנתי</button>
+            <button id="btn-close-ios-modal">הבנתי, אני אעשה את זה</button>
         </div>
     </div>
 
