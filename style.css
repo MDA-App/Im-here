@@ -1,0 +1,46 @@
+/* ביטול סימון טקסט לכל האפליקציה */
+html, body {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;      /* IE/Edge */
+    user-select: none;         /* כרום ופיירפוקס */
+    
+    /* מניעת תפריט לחיצה ארוכה ב-iOS (חשוב ל-PWA) */
+    -webkit-touch-callout: none;
+}
+
+/* החרגת שדות טקסט כדי שיהיה אפשר להקליד בהם */
+input, textarea {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="apple-touch-icon" href="M-logo.png">
+
+<meta name="apple-mobile-web-app-title" content="My App">
+
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+function onCheckIn() {
+    if (navigator.vibrate) {
+        navigator.vibrate(50); // רטט קצר של 50 מילישניות
+    }
+    // כאן הקוד של שליחת הנוכחות...
+      }
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+  
