@@ -1,0 +1,28 @@
+{
+  "short_name": "נוכחות",
+  "name": "מערכת נוכחות חכמה",
+  "description": "אפליקציה לניהול ודיווח נוכחות מבוססת מיקום",
+  "icons": [
+    {
+      "src": "M-icon.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "M-logo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8fafc",
+  "theme_color": "#d32f2f",
+  "scope": "./",
+  "lang": "he",
+  "dir": "rtl",
+  "id": "study.imhere"
+}
