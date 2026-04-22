@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "study.imhere.twa",
+        "sha256_cert_fingerprints": ["D2:06:7F:D6:F1:42:1F:F6:EC:B2:16:92:2F:DE:E0:13:3A:13:28:E8:C2:6C:F2:45:A1:2E:1E:66:BF:9C:E3:42"]
+      }
+    }]
