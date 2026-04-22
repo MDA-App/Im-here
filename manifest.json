@@ -4,13 +4,13 @@
   "description": "אפליקציה לניהול ודיווח נוכחות מבוססת מיקום",
   "icons": [
     {
-      "src": "m_icon-s.png",
+      "src": "micon.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "m-icon.png",
+      "src": "micon2.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
