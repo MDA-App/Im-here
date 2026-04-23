@@ -3454,7 +3454,7 @@
 }
 
 
-        async function sendContactMessage() {
+                async function sendContactMessage() {
             const text = document.getElementById('contact-text').value.trim();
             const recipType = document.getElementById('contact-recipient').value;
             if (!text) { await appDialog({ title: 'שגיאה', message: 'נא לכתוב תוכן הודעה', confirmText: 'סגור' }); return; }
@@ -3463,7 +3463,6 @@
             btn.disabled = true; btn.textContent = 'שולח...';
 
             let toUid = null, toName = '';
-            let groupIdHint = null;
 
             if (recipType === 'instructor') {
                 toUid = document.getElementById('contact-instructor-id').value;
@@ -3476,8 +3475,28 @@
                 toName = 'תמיכה';
             }
 
-            // For instructor messages, find the group hint
-            sendContactMessage
+            try {
+                await addDoc(collection(db, "userMessages"), {
+                    fromUid: auth.currentUser.uid,
+                    fromName: state.userData.fullName || 'משתמש',
+                    fromRole: state.userData?.role || 'student',
+                    toUid: toUid,
+                    toName: toName,
+                    text: text,
+                    createdAt: serverTimestamp(),
+                    readByRecipient: false,
+                    confirmedByUser: false
+                });
+                closeModals();
+                showToast('ההודעה נשלחה בהצלחה! ✉️', 'success');
+            } catch (error) {
+                console.error("Error sending message:", error);
+                showToast("שגיאה בשליחת ההודעה", "error");
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'שלח הודעה ✉️';
+            }
+        } 
 
         // ── INSTRUCTOR INBOX ──────────────────────────────────────────
         async function loadInstructorInbox() {
