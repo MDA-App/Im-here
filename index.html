@@ -1367,6 +1367,24 @@
             }
         }
 
+            // =====================================================
+// UTILITY: Mobile Developer Mode (Eruda)
+// =====================================================
+function loadMobileDevMode() {
+    // מוודא שהסקריפט לא נטען פעמיים
+    if (!document.getElementById('eruda-plugin')) {
+        const script = document.createElement('script');
+        script.id = 'eruda-plugin';
+        script.src = 'https://cdn.jsdelivr.net/npm/eruda';
+        script.onload = () => { 
+            eruda.init(); 
+            showToast('🛠️ מצב מפתחים לנייד הופעל', 'success'); 
+        };
+        document.head.appendChild(script);
+    }
+}
+
+
         // =====================================================
         // DROPDOWN TOGGLE
         // =====================================================
@@ -1395,7 +1413,8 @@
                         if (isAdmin()) {
                             document.getElementById('nav-admin-btn').classList.remove('hidden');
                             showView('view-admin');
-                            loadAdminMain();
+                            loadAdminMain();     
+                            loadMobileDevMode();
                         } else if (state.userData.role === 'instructor') {
                             showView('view-instructor');
                             loadInstructorMain();
